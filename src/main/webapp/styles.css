@@ -7,13 +7,20 @@ body {
   top: 200px;
 }
 
-#container {
+#containerAll {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+}
+
+#container {
   font-size:15px;
 }
 
 #add {
   padding: 20px
+}
+
+#update {
+
 }
