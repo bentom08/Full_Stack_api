@@ -1,25 +1,18 @@
-body {
+#containerAll {
   background-color: CornflowerBlue;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 }
 
 #Table {
   padding: 100px;
 }
 
-#containerAll {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-}
-
 #addContainer {
-  font-size:15px;
-}
-
-#add {
-  padding: 20px
+  padding-top: 50px;
 }
 
 #updateContainer {
-  font-family: serif;
+
 }
