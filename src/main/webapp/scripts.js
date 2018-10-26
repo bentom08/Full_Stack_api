@@ -83,25 +83,23 @@ function updateMovie() {
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open("PUT", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/updateMovie/" + getID(), false);
 
-	if (isNaN(getTitle()) == false) {
+	if (getTitle() == "") {
 		var stringTitle = httpGetSingle(getID()).title;
 	} else {
 		var stringTitle = getTitle();
 	}
 
-	if (isNaN(getGenre()) == false) {
+	if (getGenre() == "") {
 		var stringGenre = httpGetSingle(getID()).genre;
 	} else {
 		var stringGenre = getGenre();
 	}
 
-	if (isNaN(getRating()) == false) {
+	if (getRating() == "") {
 		var stringRating = httpGetSingle(getID()).ageRating;
-
 	} else {
 		var stringRating = getRating();
 	}
-	console.log(httpGetSingle(getID()).ageRating);
 
 	xmlHttp.send(JSON.stringify({
 		title: stringTitle,
