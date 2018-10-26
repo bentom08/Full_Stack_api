@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript" language='javascript' src='scripts.js'>
+</script>
+</head>
+<body>
+<h1 id="Output">
+
+</h1>
+
+Title<br>
+<input id="title" type = "text" name ="title" placeholder="title..."/><br><br>
+Genre<br>
+<input id="genre" type="text" name="genre" placeholder="genre..."/><br><br>
+Age Rating<br>
+<input id="rating" type="text" name="rating"  placeholder="age rating..." /><br><br>
+<input type="button" value="add movie" onclick='addMovie()'/><br>
+
+<input type="button" value="Get All" onclick='httpGet("http://localhost:8080/api-0.0.1-SNAPSHOT/api/movie/getAllMovies")'
+/><br>
+
+Movie ID: <input type="text" id="get"/> <input type="button" value="get" onclick='httpGetSingle()'/><br>
+Movie ID: <input type="text" id="delete"/> <input type="button" value="delete" onclick='httpDelete()'/>
+
+</body>
+</html>
