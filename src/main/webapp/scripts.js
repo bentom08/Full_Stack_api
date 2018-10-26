@@ -97,10 +97,11 @@ function updateMovie() {
 
 	if (isNaN(getRating()) == false) {
 		var stringRating = httpGetSingle(getID()).ageRating;
+
 	} else {
 		var stringRating = getRating();
 	}
-
+	console.log(stringRating);
 
 	xmlHttp.send(JSON.stringify({
 		title: stringTitle,
