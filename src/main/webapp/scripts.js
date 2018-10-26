@@ -75,7 +75,7 @@ function getTable() {
 		var row = array[i];
 		string += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.genre + "</td><td>" + row.ageRating + '</td><td><input type="button" value="delete" onclick=\'httpDelete('+ row.id + ')\'/>' + "</td></tr>";
 	}
-	
+
 	document.getElementById("Table").innerHTML = '<th>ID</th><th>Title</th><th>Genre</th><th>Age Rating</th>' + string;
 }
 
@@ -83,19 +83,19 @@ function updateMovie() {
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open("PUT", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/updateMovie/" + getID(), false);
 
-	if (getTitle() == null) {
+	if (getTitle() == '') {
 		var stringTitle = httpGet(getID()).title;
 	} else {
 		var stringTitle = getTitle();
 	}
 
-	if (getGenre() == null) {
+	if (getGenre() == '') {
 		var stringGenre = httpGet(getID()).genre;
 	} else {
 		var stringGenre = getGenre();
 	}
 
-	if (getRating() == null) {
+	if (getRating() == '') {
 		var stringRating = httpGet(getID()).rating;
 	} else {
 		var stringRating = getRating();
