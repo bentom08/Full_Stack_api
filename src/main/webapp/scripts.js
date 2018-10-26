@@ -84,12 +84,14 @@ function updateMovie() {
 	xmlHttp.open("PUT", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/updateMovie/" + getID(), false);
 
 	if (isNaN(getTitle()) == true) {
+		console.log("test");
 		var stringTitle = httpGetSingle(getID()).title;
 	} else {
 		var stringTitle = getTitle();
 	}
 
 	if (isNaN(getGenre()) == true) {
+		console.log("test1");
 		var stringGenre = httpGetSingle(getID()).genre;
 	} else {
 		var stringGenre = getGenre();
