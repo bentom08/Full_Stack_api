@@ -53,6 +53,8 @@ public class MovieRepository implements MovieRepoInterface {
 		return "{\"message\": \"movie sucessfully added\"}";
 	}
 	
+	
+	@Transactional(REQUIRED)
 	public String updateMovie(String movie, Long id) {
 		Movie newMovie = util.getObjectForJSON(movie, Movie.class);
 		Movie oldMovie = findMovie(id);
