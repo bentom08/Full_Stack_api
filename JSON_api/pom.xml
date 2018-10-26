@@ -17,6 +17,15 @@
         <version.war.plugin>3.0.0</version.war.plugin>
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
+    
+    <profiles>
+    <profile>
+    <id>deploy</id>
+    <build>
+    <directory>C:\Users\Admin\wildfly-10.1.0.Final\standalone\deployments</directory>
+    </build>
+    </profile>
+    </profiles>
 
 <dependencyManagement>
       <dependencies>
