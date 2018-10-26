@@ -8,9 +8,7 @@ body {
 }
 
 #container {
-  position:relative;
-  margin: auto;
-  top: 200px;
-  right:200px;
-  align:center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 }
