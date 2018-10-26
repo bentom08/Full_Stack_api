@@ -4,5 +4,10 @@ body {
 
 table.Table {
   margin: auto;
+  border: 100px;
+}
 
+input.add {
+  margin: auto;
+  border: 100px;
 }
