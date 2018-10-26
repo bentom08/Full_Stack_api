@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  font-size:15pt;
+  font-size:15px;
 }
 
 #add {
