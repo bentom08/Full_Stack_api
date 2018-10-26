@@ -3,11 +3,11 @@ body {
 }
 
 #Table {
-  align-content: center;
-  padding-top: 20%;
+  align: center;
+  top: 100px;
 }
 
 #add {
-  align-content: center;
-  padding-top: 20%;
+  align: center;
+  top: 100px;
 }
