@@ -82,22 +82,22 @@ function getTable() {
 function updateMovie() {
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open("PUT", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/updateMovie/" + getID(), false);
-var stringTitle = httpGet(getID()).title;
-	if (getTitle() == null) {
-		var stringTitle = httpGet(getID()).title;
+
+	if (isNaN(getTitle()) == true) {
+		var stringTitle = httpGetSingle(getID()).title;
 	} else {
 		var stringTitle = getTitle();
 	}
 
-	if (getGenre() == null) {
-		var stringGenre = httpGet(getID()).genre;
+	if (isNaN(getGenre()) == true) {
+		var stringGenre = httpGetSingle(getID()).genre;
 	} else {
 		var stringGenre = getGenre();
 	}
 
-	if (getRating() == null) {
+	if (isNaN(getRating()) == true) {
 		console.log("test");
-		var stringRating = httpGet(getID()).rating;
+		var stringRating = httpGetSingle(getID()).rating;
 	} else {
 		var stringRating = getRating();
 	}
