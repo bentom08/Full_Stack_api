@@ -2,12 +2,12 @@ body {
   background-color: CornflowerBlue;
 }
 
-table.Table {
-  margin: auto;
-  border: 100px;
+#Table {
+  align-content: center;
+  padding-top: 20%;
 }
 
-input.add {
-  margin: auto;
-  border: 100px;
+#add {
+  align-content: center;
+  padding-top: 20%;
 }
