@@ -101,7 +101,7 @@ function updateMovie() {
 	} else {
 		var stringRating = getRating();
 	}
-	console.log(stringRating);
+	console.log(httpGetSingle(getID()).ageRating);
 
 	xmlHttp.send(JSON.stringify({
 		title: stringTitle,
