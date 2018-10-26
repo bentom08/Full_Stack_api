@@ -96,7 +96,7 @@ function updateMovie() {
 	}
 
 	if (isNaN(getRating()) == false) {
-		var stringRating = httpGetSingle(getID()).rating;
+		var stringRating = httpGetSingle(getID()).ageRating;
 	} else {
 		var stringRating = getRating();
 	}
