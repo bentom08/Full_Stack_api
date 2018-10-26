@@ -8,7 +8,8 @@ body {
 }
 
 #container {
-  position:relative;
+  position:absolute;
   margin: auto;
   top: 200px;
+  left:auto;
 }
