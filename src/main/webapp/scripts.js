@@ -10,12 +10,12 @@ function getGetVal() {
 		return document.getElementById("get").value;
 }
 
-function httpGetSingle() {
+function httpGetSingle(x) {
 		var xmlHttp = new XMLHttpRequest();
-		xmlHttp.open("GET", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/getMovie/" + getGetVal(), false);
+		xmlHttp.open("GET", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/getMovie/" + x, false);
 		xmlHttp.send(null);
 
-		displayJSON(xmlHttp.response);
+		return JSON.parse(xmlHttp.response);
 }
 
 function getDeleteVal() {
@@ -28,6 +28,10 @@ function httpDelete(x) {
 		xmlHttp.send(null);
 
 		getTable();
+}
+
+function getID() {
+		return document.getElementById("id").value;
 }
 
 function getTitle() {
@@ -73,4 +77,35 @@ function getTable() {
 	}
 
 	document.getElementById("Table").innerHTML = '<th>ID</th><th>Title</th><th>Genre</th><th>Age Rating</th>' + string;
+}
+
+function updateMovie() {
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open("PUT", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/updateMovie/" + getID(), false);
+
+	if (getTitle() == null) {
+		var stringTitle = httpGet(getID()).title;
+	} else {
+		var stringTitle = getTitle();
+	}
+
+	if (getGenre() == null) {
+		var stringGenre = httpGet(getID()).genre;
+	} else {
+		var stringGenre = getGenre();
+	}
+
+	if (getRating() == null) {
+		var stringRating = httpGet(getID()).rating;
+	} else {
+		var stringRating = getRating();
+	}
+
+	xmlHttp.send(JSON.stringify({
+		title: stringTitle,
+		genre: stringGenre,
+		ageRating: stringRating
+	}));
+
+	getTable();
 }
