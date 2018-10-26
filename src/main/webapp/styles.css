@@ -3,7 +3,7 @@ body {
 }
 
 #Table {
-  padding: 200px;
+  padding: 100px;
 }
 
 #containerAll {
@@ -12,7 +12,7 @@ body {
   align-items: center;
 }
 
-#container {
+#addContainer {
   font-size:15px;
 }
 
@@ -20,6 +20,6 @@ body {
   padding: 20px
 }
 
-#update {
-
+#updateContainer {
+  font-family: serif;
 }
