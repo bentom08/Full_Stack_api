@@ -2,12 +2,18 @@ body {
   background-color: CornflowerBlue;
 }
 
-tr:nth-child(even) {background-color: RoyalBlue;}
+/* tr:nth-child(even) {background-color: RoyalBlue;} */
 
-
-th {
-  text-align: left;
+tr:hover {
+  background-color: RoyalBlue;
 }
+
+
+th, td {
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
 
 #Table {
   padding: 50px;
