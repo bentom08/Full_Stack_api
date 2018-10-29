@@ -35,3 +35,7 @@ th {
 #updateContainer {
 
 }
+
+input[type="text"]:focus {
+  border: 2px solid blue;
+}
