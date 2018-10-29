@@ -2,14 +2,26 @@ body {
   background-color: CornflowerBlue;
 }
 
+#Table tr {
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {background-color: RoyalBlue;}
+
+
+th {
+  text-align: left;
+}
+
+#Table {
+  padding: 50px;
+  width: 50%;
+}
+
 #containerAll {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-}
-
-#Table {
-  padding: 100px;
 }
 
 #add {
