@@ -2,10 +2,6 @@ body {
   background-color: CornflowerBlue;
 }
 
-#Table tr {
-  border: 1px solid black;
-}
-
 tr:nth-child(even) {background-color: RoyalBlue;}
 
 
@@ -30,10 +26,6 @@ th {
 
 #addContainer {
   padding-top: 50px;
-}
-
-#updateContainer {
-
 }
 
 input[type="text"]:focus {
