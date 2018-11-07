@@ -73,30 +73,30 @@ function getTable() {
 
 	for (var i = 0; i < n; i++) {
 		var row = array[i];
-		string += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.genre + "</td><td>" + row.ageRating + '</td><td><input type="button" value="delete" onclick=\'httpDelete('+ row.id + ')\'/>' + "</td></tr>";
+		string += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.genre + "</td><td>" + row.ageRating + '</td><td><input type="button" value="delete" onclick=\'httpDelete('+ row.id + ')\'/></td>' + '<td><input type="button" value="update" onclick=\'updateMovie('+ row.id + ')\'/>' + "</td></tr>";
 	}
 
 	document.getElementById("Table").innerHTML = '<th>ID</th><th>Title</th><th>Genre</th><th>Age Rating</th><th></th>' + string;
 }
 
-function updateMovie() {
+function updateMovie(x) {
 	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open("PUT", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/updateMovie/" + getID(), false);
+	xmlHttp.open("PUT", "http://localhost:8081/api-0.0.1-SNAPSHOT/api/movie/updateMovie/" + x, false);
 
 	if (getTitle() == "") {
-		var stringTitle = httpGetSingle(getID()).title;
+		var stringTitle = httpGetSingle(x).title;
 	} else {
 		var stringTitle = getTitle();
 	}
 
 	if (getGenre() == "") {
-		var stringGenre = httpGetSingle(getID()).genre;
+		var stringGenre = httpGetSingle(x).genre;
 	} else {
 		var stringGenre = getGenre();
 	}
 
 	if (getRating() == "") {
-		var stringRating = httpGetSingle(getID()).ageRating;
+		var stringRating = httpGetSingle(x).ageRating;
 	} else {
 		var stringRating = getRating();
 	}
